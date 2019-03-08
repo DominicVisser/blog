@@ -9,6 +9,9 @@
 		<p><strong>Social Media</strong></p>
 	</div>
 	<div class="text-content">
+		<p><br></p>
+		<p><br></p>
+		<p><br></p>
 		<small>Copyright</small>
 	</div>
 </footer>

@@ -42,7 +42,23 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+
+        $file = pathinfo($request->image->getClientOriginalName());
+
+        $request->file('image')->storeAs('', $file['filename'].'.'.$file['extension']);
+
+        $image = new Image;
+
+        $image->title = $file['filename'];
+        $image->author = '';
+        $image->title = str_slug($file['filename']);
+        $image->extension = strolower($file['extension']);
+        $image->width = 0;
+        $image->height = 0;
+        $image->filesize = 0;
+
+        
     }
 
     /**
